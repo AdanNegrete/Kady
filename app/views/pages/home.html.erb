@@ -75,21 +75,21 @@
   <!-- Right Pane -->
   <div class="w-full bg-gray-100 lg:w-1/2 flex items-center justify-center">
     <div class="max-w-md w-full p-6">
-      <h1 class="text-3xl font-semibold mb-6 text-black text-center">Bienvenido a Kady</h1>
-      <div class="space-y-4">
+        <h1 class="text-3xl font-semibold mb-6 text-black text-center">Bienvenido a Kady</h1>
+        <div class="space-y-4">
         <% if current_user %>
-          <%= button_to "Cerrar Sesión", destroy_user_session_path, method: :delete, class: "w-full bg-black text-white p-2 rounded-md hover:bg-gray-800 focus:outline-none focus:bg-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 transition-colors duration-300" %>
+            <%= button_to "Cerrar Sesión", destroy_user_session_path, method: :delete, class: "w-full bg-black text-white p-2 rounded-md hover:bg-gray-800 focus:outline-none focus:bg-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 transition-colors duration-300" %>
         <% else %>
-          <%= link_to "Ingresar", new_user_registration_path, class: "w-full bg-black text-white p-2 rounded-md hover:bg-gray-800 focus:outline-none focus:bg-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 transition-colors duration-300" %>
+            <%= link_to "Registrate", new_user_registration_path, class: "block w-full bg-black text-white p-2 text-center rounded-md hover:bg-gray-800 focus:outline-none focus:bg-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 transition-colors duration-300" %>
         <% end %>
-      </div>
-      <div class="mt-4 text-sm text-gray-600 text-center">
+        </div>
+        <div class="mt-4 text-sm text-gray-600 text-center">
         <% if current_user %>
-          <p>Ya estás conectado.</p>
+            <p>Ya estás conectado.</p>
         <% else %>
-          <p>¿Ya tienes cuenta? <%= link_to "Ingresa aquí", new_user_session_path, class: "text-black hover:underline" %></p>
+            <p>¿Ya tienes cuenta? <%= link_to "Ingresa aquí", new_user_session_path, class: "text-black hover:underline" %></p>
         <% end %>
-      </div>
+        </div>
     </div>
-  </div>
+    </div>
 </div>
